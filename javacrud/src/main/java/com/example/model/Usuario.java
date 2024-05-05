@@ -1,13 +1,25 @@
-package model;
+package com.example.model;
 
 public class Usuario {
     private int id;
-    private String nome;
-    private String email;
+    private String name;
+    private String position;
 
-    public Usuario(int id, String nome, String email) {
+    public Usuario(int id, String name, String position) {
         this.id = id;
-        this.nome = nome;
-        this.email = email;
+        this.name = name;
+        this.position = position;
+    }
+
+    public int getId() {
+        return id;
+    }
+    
+    public String getName() {
+        return name;
+    }
+
+    public String getPosition() {
+        return position;
     }
 }

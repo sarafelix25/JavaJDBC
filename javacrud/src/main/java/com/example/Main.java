@@ -1,6 +1,10 @@
+package com.example;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
+import com.example.controller.Controller;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,5 +16,8 @@ public class Main {
         } catch (SQLException e) {
             System.out.println("Erro ao conectar ao banco de dados: " + e.getMessage());
         }
+
+        Controller controller = new Controller();
+        controller.iniciar();
     }
 }

@@ -1,11 +1,15 @@
-package view;
+package com.example.view;
 
-import java.util.Scanner;
+import com.example.model.Usuario;
+import java.util.List;
 
 public class View {
-    private Scanner scanner;
+    public void exibirMenu() {}
 
-    public View() {
-        scanner = new Scanner(System.in);
+    public void exibirJogadoras(List<Usuario> jogadoras) {
+        System.out.println("Lista de jogadoras do time feminino do Corinthians:");
+        for (Usuario jogadora: jogadoras) {
+            System.out.println("id: " + jogadora.getId() + ", Nome: " + jogadora.getName() + ", Posição: " + jogadora.getPosition());
+        }
     }
 }
